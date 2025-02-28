@@ -52,14 +52,29 @@ Make sure not to put your code into the comments, because then nothing will happ
 
 .button2 {
   /* Style me! Change my color or background-color, or both! You can experiment with different color formats here, like HEX, RGB, etc. */
+  color: #ff5733;
+  border: none;
+  border-radius: 20px 2px;
+  background-color: rgb(250, 300, 200);
+  height: 50px;
 }
 
 .button3 {
   /* Style me! You can test out changing the font, font size, ...*/
+  color: white;
+  border: none;
+  width: 100px;
+  height: 100px;
+  background-color: lightslategray;
+  font-family: unset;
+  font-size: 100%;
 }
 
 .button4 {
   /* Style me! Can you add a shadow to this button? Try playing around with shadow properties - you can even change the shadow color, size, and more. */
+  box-shadow: 5px 5px 10px rgba(121, 14, 14, 0.9);
+  background-color: cornflowerblue;
+  color: yellow;
 }
 
 /* Feel free to play around with other properties, too. */
