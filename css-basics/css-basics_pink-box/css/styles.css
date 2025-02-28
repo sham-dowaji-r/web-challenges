@@ -27,6 +27,10 @@ div {
   /* Can you give the box round edges with a radius of 8px? */
   border: 10px solid rgb(134, 57, 57);
   border-radius: 8px;
+  border-style: dashed;
 
   /* ✨ Feel free to experiment! */
+  text-align: center;
+  font-size: 15px;
+  padding-top: 25px;
 }
