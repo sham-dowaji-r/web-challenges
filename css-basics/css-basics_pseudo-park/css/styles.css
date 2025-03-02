@@ -23,7 +23,7 @@
 .animal {
   padding: 16px;
   font-size: 32px;
-  transition: background-color 0.3s ease; /* إضافة تأثير الانتقال لتغيير اللون بسلاسة */
+  transition: background-color 0.3s ease;
 }
 .crocodile:hover {
   background-color: lightblue;
