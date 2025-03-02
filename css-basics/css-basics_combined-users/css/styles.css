@@ -45,23 +45,46 @@ li {
   margin: 0;
   background-color: white;
 }
+aside .user {
+  max-width: 250px;
+  padding: 12px;
+  border-radius: 4px;
+}
 
 .name {
   font-size: 18px;
   text-transform: uppercase;
   margin: 0;
 }
+aside .user .name {
+  font-size: 16px;
+}
 
 .bio {
   font-size: 14px;
   color: darkslategray;
 }
-
+aside .user .bio {
+  font-size: 12px;
+  margin: 6px 0;
+}
 .location {
   font-size: 12px;
   font-weight: 600;
   text-align: end;
   margin: 0;
+}
+aside .user .location {
+  font-size: 10px;
+}
+
+ul .user .bio {
+  display: none;
+}
+
+ul .user .location {
+  text-align: left;
+  color: darkslategray;
 }
 
 /*
