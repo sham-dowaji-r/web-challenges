@@ -10,7 +10,15 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+const postTitle = "Hallo";
+const postText = "Welcome to my world";
+let numberOflike = 50;
+const postUser = "sham45";
+const isReported = false;
 
+numberOflike++;
+
+console.log("Updated Likes:", numberOflike);
 // --^-- write your code here --^--
 
 /*
@@ -18,5 +26,9 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+console.log("Post Title:", postTitle);
+console.log("Post Text:", postText);
+console.log("number of like:", numberOflike);
+console.log("Posted by:", postUser);
+console.log("Is Reported:", isReported);
 // --^-- write your code here --^--
