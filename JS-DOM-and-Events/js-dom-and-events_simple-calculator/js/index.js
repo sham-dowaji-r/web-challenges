@@ -1,6 +1,6 @@
 console.clear();
 
-const operand1 = 12;
+let operand1 = 12;
 const operand2 = 4;
 
 // ----- Mathematical Operations -----
@@ -8,6 +8,12 @@ const operand2 = 4;
 // Step 1: Use `document.querySelector` to select each button by its `data-js` attribute.
 
 // --v-- write your code here --v--
+const addButton = document.querySelector('[data-js="add"]');
+const subtractButton = document.querySelector('[data-js="subtract"]');
+const multiplyButton = document.querySelector('[data-js="multiply"]');
+const divideButoon = document.querySelector('[data-js="divide"]');
+const exponentButoon = document.querySelector('[data-js="exponent"]');
+const moduloButoon = document.querySelector('[data-js="modulo"]');
 
 // --^-- write your code here --^--
 
@@ -22,7 +28,24 @@ For each operation (add, subtract, multiply, divide, exponent, and modulo):
 */
 
 // --v-- write your code here --v--
-
+addButton.addEventListener("click", () => {
+  console.log(`${operand1 + operand2}`);
+});
+subtractButton.addEventListener("click", () => {
+  console.log(`${operand1 - operand2}`);
+});
+multiplyButton.addEventListener("click", () => {
+  console.log(`${operand1 * operand2}`);
+});
+divideButoon.addEventListener("click", () => {
+  console.log(`${operand1 / operand2}`);
+});
+exponentButoon.addEventListener("click", () => {
+  console.log(`${operand1 ** operand2}`);
+});
+moduloButoon.addEventListener("click", () => {
+  console.log(`${operand1 % operand2}`);
+});
 // --^-- write your code here --^--
 
 // ----- Update the First Operand -----
@@ -38,5 +61,46 @@ Step 2: Add event listeners to update `operand1` based on the button clicked. Lo
 */
 
 // --v-- write your code here --v--
+const increaseByOneButton = document.querySelector(
+  '[data-js="increase-by-one"]'
+);
+const increaseByFiveButton = document.querySelector(
+  '[data-js="increase-by-five"]'
+);
+const decreaseByOnebutton = document.querySelector(
+  '[data-js="decrease-by-one"]'
+);
+const decreaseByFivebutton = document.querySelector(
+  '[data-js="decrease-by-five"]'
+);
+const multiplyByTwoButton = document.querySelector(
+  '[data-js="multiply-by-two"]'
+);
+const divideByTwoButton = document.querySelector('[data-js="divide-by-two"]');
+
+increaseByOneButton.addEventListener("click", () => {
+  operand1++;
+  console.log(`${operand1}`);
+});
+increaseByFiveButton.addEventListener("click", () => {
+  operand1 += 5;
+  console.log(`${operand1}`);
+});
+decreaseByOnebutton.addEventListener("click", () => {
+  operand1--;
+  console.log(`${operand1}`);
+});
+decreaseByFivebutton.addEventListener("click", () => {
+  operand1 -= 5;
+  console.log(`${operand1}`);
+});
+multiplyByTwoButton.addEventListener("click", () => {
+  operand1 *= 2;
+  console.log(`${operand1}`);
+});
+divideByTwoButton.addEventListener("click", () => {
+  operand1 /= 2;
+  console.log(`${operand1}`);
+});
 
 // --^-- write your code here --^--
