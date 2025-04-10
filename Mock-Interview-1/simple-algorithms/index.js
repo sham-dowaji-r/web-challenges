@@ -37,12 +37,32 @@ console.log(findLongestWord(words));
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 function sumNumbers(numbers) {
-  // TODO:
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
 }
 
+console.log(sumNumbers(numbers));
+//////////////////////////////////////////////////////
+const numbers1 = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+function sumNumbers(numbers1) {
+  let sum = 0;
+  for (num of numbers1) {
+    sum += num;
+  }
+  return sum;
+}
+console.log(sumNumbers(numbers1));
+/////////////////////////////////////////////////////
 // Calculate the average length of the words
+//نحسب طول كل كلمة.
 
-const words2 = [
+//نجمع الأطوال.
+
+//نقسم المجموع على عدد الكلمات.
+/*const words2 = [
   "eclipse",
   "harmony",
   "cascade",
@@ -56,9 +76,35 @@ const words2 = [
 ];
 
 function averageWordLength(words) {
-  // TODO:
+  let totalLengh = 0;
+  for (let word of words) {
+    totalLengh += word.length;
+  }
+  return totalLengh / words.length;
+}
+console.log(averageWordLength(words));*/
+///////////////////////////////////////////////////////////////
+const words4 = [
+  "eclipse", // 7
+  "harmony", // 7
+  "cascade", // 7
+  "labyrinth", // 9
+  "quartz", // 6
+  "serendipity", // 11
+  "zenith", // 6
+  "ephemeral", // 9
+  "vortex", // 6
+  "mystique", // 8
+];
+
+function averageWordLength(words) {
+  const totalLength = words.reduce((sum, word) => sum + word.length, 0);
+  console.log("Total length:", totalLength); // 80
+  return totalLength / words.length;
 }
 
+console.log("Average length:", averageWordLength(words4));
+//////////////////////////////////////////////////////////////
 // Unique arrays - return an array without duplicates
 
 const words3 = [
@@ -76,8 +122,19 @@ const words3 = [
 ];
 
 function uniquifyArray(words) {
-  // TODO:
+  let unique = [];
+  for (let word of words) {
+    if (!unique.includes(word)) {
+      unique.push(word);
+    }
+  }
+  return unique;
 }
+console.log(uniquifyArray(words));
+
+//best solution
+//return [...new set(words)]; set لا تسمح بتكرار القيم
+///////////////////////////////////////////////////
 
 // Find elements
 const wordsFind = [
@@ -92,8 +149,9 @@ const wordsFind = [
 ];
 
 function doesWordExist(haystack, needle) {
-  // TODO:
+  return haystack.includes(needle);
 }
+console.log(doesWordExist(wordsFind, "truth"));
 
 // Count repetition
 
@@ -112,9 +170,15 @@ const wordsCount = [
 ];
 
 function howManyTimes(haystack, needle) {
-  // TODO:
+  let count = 0;
+  for (let word of haystack) {
+    if (word === needle) {
+      count++;
+    }
+  }
+  return count;
 }
-
+console.log(howManyTimes(wordsCount, "matter"));
 // Bonus: A generic sum function
 // for strings use the length of the string, for booleans use 1 and 0
 const mixedArray = [
@@ -131,8 +195,21 @@ const mixedArray = [
 ];
 
 function sum(array) {
-  // TODO:
+  return array.reduce((total, item) => {
+    if (typeof item === "string") {
+      // إذا كان العنصر من نوع string، أضف طوله
+      return total + item.length;
+    } else if (typeof item === "number") {
+      // إذا كان العنصر من نوع number، أضف الرقم نفسه
+      return total + item;
+    } else if (typeof item === "boolean") {
+      // إذا كان العنصر من نوع boolean، أضف 1 إذا كان true أو 0 إذا كان false
+      return total + (item ? 1 : 0);
+    }
+    return total;
+  }, 0);
 }
+console.log(sum(mixedArray));
 
 // Bonus: Write a function that calculates the greatest product of four
 // numbers that is either horizontally or vertically in the array
