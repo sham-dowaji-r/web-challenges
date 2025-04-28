@@ -15,14 +15,21 @@
 ## Acceptance Criteria
 
 - User can see a list of movies.
+
 - Each movie displays an image, title, and a rating.
+
 - If there is an error fetching the movie list, the user sees an error message.
+
 - User can scrolling to browse the list of current movies.
 
 ## Tasks
 
 - Design the movie list layout (grid or list view).
+
 - Fetch the list of current movies from the Movies API.
+
 - Display each movie's image, title, and rating.
-- Implement error handling when fetching movie data fails
+
+- Implement error handling when fetching movie data fails.
+
 - Implement vertical scrolling for the movie list.
