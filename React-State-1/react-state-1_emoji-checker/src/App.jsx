@@ -1,17 +1,23 @@
+import { useState } from "react";
 import "./styles.css";
 
 export default function App() {
-  let code = "?";
+  //let code = "?";
+  const [code, setCode] = useState("");
 
   const validCode = "🐡🐠🐋";
 
   function handleClick(emoji) {
-    console.log(emoji);
-    console.log(code);
+    //console.log(emoji);
+    //console.log(code);
+    setCode((code) => code + emoji);
   }
-
+  function handleReset() {
+    setCode("");
+  }
   return (
     <div className="container">
+      <p>{code}</p>
       <div className="button-container">
         <button
           type="button"
@@ -26,16 +32,6 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            handleClick("🐋");
-          }}
-        >
-          <span role="img" aria-label="Whale">
-            🐋
-          </span>
-        </button>
-        <button
-          type="button"
-          onClick={() => {
             handleClick("🐠");
           }}
         >
@@ -43,14 +39,19 @@ export default function App() {
             🐠
           </span>
         </button>
+        <button
+          type="button"
+          onClick={() => {
+            handleClick("🐋");
+          }}
+        >
+          <span role="img" aria-label="Whale">
+            🐋
+          </span>
+        </button>
       </div>
 
-      <button
-        type="button"
-        onClick={() => {
-          console.log("Reset Code!");
-        }}
-      >
+      <button type="button" onClick={handleReset}>
         Reset
       </button>
 
